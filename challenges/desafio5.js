@@ -1,6 +1,6 @@
 db.produtos.find(
     {
-     $or: [{ curtidas: 36 }, { curtidas: 85 }],
+     $or: [{ curtidas: 36 }, { vendidos: 85 }],
     },
     {
       _id: 0,
@@ -8,4 +8,4 @@ db.produtos.find(
       curtidas: 1,
       vendidos: 1,
     },
-  ).sort({ vendidos: 1 });
+  );
