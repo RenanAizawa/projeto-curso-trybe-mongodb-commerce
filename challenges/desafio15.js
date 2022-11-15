@@ -6,12 +6,12 @@ db.produtos.updateMany(
 );
 
 db.produtos.updateMany( // 2 query
-{ tags: "bovino" },
+{ tags: { $all: ["bovino"] } },
 { $inc: { avaliacao: 5 } },
 );
 
 db.produtos.updateMany( // 3 query
-{ tags: "ave" },
+{ tags: { $all: ["ave"] } },
 { $inc: { avaliacao: 3 } },
 );
 
